@@ -1,6 +1,6 @@
 "use client";
 
-import { useUI } from "../UIContext";
+import { useUI } from "../context/UIContext";
 import Image from "next/image"
 
 export default function MenuToggle() {

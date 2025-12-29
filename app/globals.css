@@ -5,6 +5,18 @@
 @tailwind utilities;
 
 @layer components {
+  .header-primary {
+    @apply text-gray-700 text-xl font-bold;
+  }
+
+  .page-wrapper {
+    @apply p-3 h-full bg-slate-300;
+  }
+
+  .page-content-card {
+    @apply bg-white h-full font-mono rounded-lg shadow-lg/30;
+  }
+
   .link-primary {
     @apply text-blue-700 hover:text-pink-500;
   }
@@ -18,6 +30,10 @@
   }
 
   .list-item-wrapper {
-    @apply px-2.5 py-1.5 text-sm/4 border-1 border-gray-300 bg-white rounded-md overflow-clip;
+    @apply px-1.5 md:px-2.5 xl:px-3 py-1.5 xl:mx-2 text-sm/4 xl:text-lg/5 border-1 border-gray-300 bg-white rounded-md overflow-clip;
+  }
+
+  .list-item-details {
+    @apply text-xs/3 xl:text-base/4;
   }
 }

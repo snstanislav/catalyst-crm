@@ -9,9 +9,9 @@ export default function TaskListItem({ taskItem, index }: { taskItem: UrgentTask
         wrapper: "flex flex-col gap-1 list-item-wrapper",
         heading: "block",
         title: "inline link-heading",
-        details: "grid grid-cols-[40%_30%_30%] gap-1 items-center text-xs ",
-        client: "link-primary leading-3 overflow-clip",
-        due: "min-w-20 ml-1 font-normal text-left text-rose-600 leading-3"
+        details: "grid grid-cols-[40%_30%_30%] gap-1 items-center list-item-details",
+        client: "link-primary overflow-clip",
+        due: "min-w-20 ml-2 font-normal text-left text-rose-600"
     }
 
     return (

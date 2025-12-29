@@ -1,6 +1,6 @@
 "use client";
 
-import { useUI } from "../UIContext";
+import { useUI } from "../context/UIContext";
 import Link from "next/link"
 
 export default function Sidebar() {
@@ -8,8 +8,6 @@ export default function Sidebar() {
     const uiContext = useUI();
     if (!uiContext) return null;
     const { isSidebarOpen, setIsSidebarOpen } = uiContext
-
-//    const LINK = "";
 
     const SIDEBAR = {
         regular: "fixed z-20 lg:static flex-col items-left bg-white w-full md:w-60 lg:w-80 h-dvh py-1 font-medium font-mono md:border-r-1 md:border-gray-300 transition-transform",
@@ -95,7 +93,7 @@ export default function Sidebar() {
                         style={{ height: "auto" }}
                     />
                     Opportunities</Link>
-                <Link href="" className={NAVIGATION.item}>
+                <Link href="about" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/about.svg"

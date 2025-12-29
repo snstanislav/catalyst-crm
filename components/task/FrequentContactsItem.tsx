@@ -5,12 +5,12 @@ export default function FrequentContactsItem({ contactItem }: { contactItem: any
     const ITEM = {
         wrapper: "flex flex-row gap-4 list-item-wrapper",
         img: { w: 45, h: 45 },
-        details: "flex flex-col gap-1",
+        details: "flex flex-col gap-2",
         name: "link-heading",
-        company: "link-primary text-xs",
-        email: "link-menu text-xs",
-        phoneWrapper: "flex flex-col text-xs",
-        phone: "link-menu"
+        company: "link-primary list-item-details",
+        email: "link-menu list-item-details",
+        phoneWrapper: "flex flex-col list-item-details",
+        phone: "link-menu list-item-details"
     }
     return (
         <div className={ITEM.wrapper}>

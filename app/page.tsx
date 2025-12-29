@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { UrgentTask } from "./lib/types/UrgentTask";
-import TaskListItem from "./components/task/TaskListItem";
-import ClientListItem from "./components/task/ClientListItem";
-import FrequentContactsItem from "./components/task/FrequentContactsItem";
+import { UrgentTask } from "../lib/types/UrgentTask";
+import TaskListItem from "../components/task/TaskListItem";
+import ClientListItem from "../components/task/ClientListItem";
+import FrequentContactsItem from "../components/task/FrequentContactsItem";
 
 export default function Home() {
 
@@ -190,10 +190,9 @@ export default function Home() {
     }
   ]
 
-
-  const WRAPPER = "grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] justify-stretch gap-3 p-3 h-full bg-slate-300";
+  const WRAPPER = "grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] xl:grid-cols-[1fr_0.9fr_0.8fr] justify-stretch gap-3 p-3 h-full bg-slate-300";
   const SECTION = {
-    base: "flex flex-col p-2 bg-white h-full font-mono rounded-lg shadow-lg/30",
+    base: "flex flex-col page-content-card p-2",
     header: "flex justify-between p-2 pt-1 pb-3 items-start font-semibold",
     seeAll: "link-primary text-xs font-normal",
     list: "flex flex-col flex-wrap gap-3 list-none",

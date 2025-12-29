@@ -6,9 +6,9 @@ export default function ClientListItem({ clientItem }: { clientItem: any }) {
     const ITEM = {
         wrapper: "flex flex-row gap-3 list-item-wrapper",
         img: { w: 45, h: 45 },
-        details: "flex flex-col gap-1",
+        details: "flex flex-col gap-2",
         name: "link-heading",
-        location: "text-xs",
+        location: " list-item-details",
     }
     return (
         <div className={ITEM.wrapper}>
