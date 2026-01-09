@@ -7,7 +7,7 @@ export default function About() {
         wrapper: "flex flex-col page-wrapper",
         base: "flex flex-col gap-6 px-10 py-7 page-content-card",
         header: "header-primary",
-        paragraph: "mb-4",
+        paragraph: "mb-3",
         address: "block text-sm"
     }
 
@@ -22,7 +22,6 @@ export default function About() {
 
                 </div>
                 <address className={ABOUT.address}>
-                    Written by Jon Doe <br />
                     Visit us at: <Link href="example.com" className="link-primary">example.com</Link>
                     <br />
                     Box 564, Miami<br />

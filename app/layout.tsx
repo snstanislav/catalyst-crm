@@ -30,7 +30,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
         <div className="flex flex-row  w-screen max-w-400">
           <UIProvider>
             <Sidebar />
-            <div className="flex flex-col flex-1 h-screen md:border-r-1 md:border-gray-300 overflow-y-auto">
+            <div className="flex flex-col flex-1 h-screen md:border-gray-300 overflow-y-auto">
               <Header />
               <main className="flex-1 bg-white">
                 {children}

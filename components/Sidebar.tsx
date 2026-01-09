@@ -10,7 +10,7 @@ export default function Sidebar() {
     const { isSidebarOpen, setIsSidebarOpen } = uiContext
 
     const SIDEBAR = {
-        regular: "fixed z-20 lg:static flex-col items-left bg-white w-full md:w-60 lg:w-80 h-dvh py-1 font-medium font-mono md:border-r-1 md:border-gray-300 transition-transform",
+        regular: "fixed z-20 lg:static flex-col items-left w-full md:w-55 h-dvh py-1 text-sm font-medium font-mono bg-white md:border-r-1 md:border-gray-300 transition-transform",
         opened: "translate-x-0",
         closed: "-translate-x-full lg:translate-x-0"
     }
@@ -52,8 +52,9 @@ export default function Sidebar() {
                     />
                 </button>
             </div>
+
             <nav className={NAVIGATION.section}>
-                <Link href="" className={NAVIGATION.item}>
+                <Link href="/" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/home.svg"
@@ -63,7 +64,7 @@ export default function Sidebar() {
                         style={{ height: "auto" }}
                     />
                     Home</Link>
-                <Link href="" className={NAVIGATION.item}>
+                <Link href="/client" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/clients.svg"
@@ -73,7 +74,7 @@ export default function Sidebar() {
                         style={{ height: "auto" }}
                     />
                     Clients</Link>
-                <Link href="" className={NAVIGATION.item}>
+                <Link href="/task" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/tasks.svg"
@@ -83,7 +84,7 @@ export default function Sidebar() {
                         style={{ height: "auto" }}
                     />
                     Tasks</Link>
-                <Link href="" className={NAVIGATION.item}>
+                <Link href="/opportunity" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/deals.svg"
@@ -93,7 +94,7 @@ export default function Sidebar() {
                         style={{ height: "auto" }}
                     />
                     Opportunities</Link>
-                <Link href="about" className={NAVIGATION.item}>
+                <Link href="/about" className={NAVIGATION.item}>
                     <img
                         className="dark:invert"
                         src="/about.svg"

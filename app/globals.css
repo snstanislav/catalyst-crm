@@ -6,7 +6,7 @@
 
 @layer components {
   .header-primary {
-    @apply text-gray-700 text-xl font-bold;
+    @apply text-gray-700 text-xl font-bold font-mono;
   }
 
   .page-wrapper {
@@ -14,7 +14,7 @@
   }
 
   .page-content-card {
-    @apply bg-white h-full font-mono rounded-lg shadow-lg/30;
+    @apply bg-white font-mono rounded-lg shadow-lg/30;
   }
 
   .link-primary {
@@ -30,7 +30,7 @@
   }
 
   .list-item-wrapper {
-    @apply px-1.5 md:px-2.5 xl:px-3 py-1.5 xl:mx-2 text-sm/4 xl:text-lg/5 border-1 border-gray-300 bg-white rounded-md overflow-clip;
+    @apply px-1.5 md:px-2.5 xl:px-3 py-1.5 text-sm/4 xl:text-lg/5 border-1 border-gray-300 bg-white rounded-md overflow-clip;
   }
 
   .list-item-details {

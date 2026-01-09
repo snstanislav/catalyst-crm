@@ -1,5 +1,5 @@
 
-import { UrgentTask } from "../../lib/types/UrgentTask"
+import type { UrgentTask } from "../../lib/types/UrgentTask"
 import TaskTypeMarker from "./TaskTypeMarker"
 import PriorityMarker from "./PriorityMarker"
 import Link from "next/link"
@@ -11,7 +11,8 @@ export default function TaskListItem({ taskItem, index }: { taskItem: UrgentTask
         title: "inline link-heading",
         details: "grid grid-cols-[40%_30%_30%] gap-1 items-center list-item-details",
         client: "link-primary overflow-clip",
-        due: "min-w-20 ml-2 font-normal text-left text-rose-600"
+        due: "min-w-20 ml-2 font-normal text-left text-rose-600",
+        taskTypeWrapper: "mx-2 text-right"
     }
 
     return (
@@ -26,7 +27,7 @@ export default function TaskListItem({ taskItem, index }: { taskItem: UrgentTask
             <div className={ITEM.details}>
                 <Link href="" className={ITEM.client}>{taskItem.client}</Link>
                 <span className={ITEM.due} title="Deadline">{taskItem.dueDate}</span>
-                <TaskTypeMarker taskType={taskItem.type} />
+                <span className={ITEM.taskTypeWrapper}><TaskTypeMarker taskType={taskItem.type} /></span>
             </div>
         </div>
     )
