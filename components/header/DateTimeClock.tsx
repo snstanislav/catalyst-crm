@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react"
-import { formatDateTime } from "../lib/utils/date-time-format"
+import { formatDateTime } from "../../lib/utils/date-time-format"
 
 export default function DateTimeClock() {
 

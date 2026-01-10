@@ -1,6 +1,6 @@
 import { fetchAllDeals } from "@/lib/deals";
 import type Opportunity from "@lib/types/Opportunity";
-import OpportunityTable from "@components/client/OpportunityTable";
+import OpportunityTable from "@/components/deal/OpportunityTable";
 
 export default async function Opportunities() {
 

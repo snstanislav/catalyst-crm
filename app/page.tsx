@@ -2,7 +2,7 @@
 import Link from "next/link";
 import TaskListItem from "@components/task/TaskListItem";
 import ClientListItem from "@components/client/ClientListItem";
-import ContactItem from "@components/ContactItem";
+import ContactItem from "@/components/client/ContactItem";
 import type Task from "@lib/types/Task";
 import type Client from "@lib/types/Client";
 import { fetchAllTasks } from "@lib/tasks";

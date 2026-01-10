@@ -1,6 +1,6 @@
 import DateTimeClock from "./DateTimeClock";
 
-export default function TodayTasks() {
+export default function CurrentIssues() {
 
     const TODAY_TASKS = {
         base: "relative flex flex-col items-center text-md font-mono h-fit",

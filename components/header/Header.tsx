@@ -1,5 +1,5 @@
 import MenuToggle from "./MenuToggle";
-import TasksToday from "./TodayTasks";
+import CurrentIssues from "./CurrentIssues";
 import AddButtonSection from "./AddButtonSection";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <div className={HEADER}>
             <MenuToggle />
-            <TasksToday />
+            <CurrentIssues />
             <AddButtonSection />
         </div >
     )

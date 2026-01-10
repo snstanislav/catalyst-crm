@@ -22,7 +22,11 @@ export default async function SingleTask({ params }: { params: any }) {
         header: "header-primary",
         nameHeader: "header-primary mb-2 text-yellow-600 text-2xl",
         deadline: "text-rose-700 font-semibold",
-        doneBtn: "ml-auto px-3 py-0.5 w-fit h-fit font-semibold text-sm text-white hover:text-emerald-500 bg-emerald-500 hover:bg-white border-2 border-emerald-500 rounded-md cursor-pointer"
+
+        controlWrapper: "flex flex-row justify-end gap-4",
+        button: "px-3 py-0.5 w-fit h-fit font-semibold text-sm rounded-md cursor-pointer",
+        editBtn: "text-white hover:text-blue-500 bg-blue-500 hover:bg-white border-2 border-blue-500",
+        doneBtn: " text-white hover:text-emerald-500 bg-emerald-500 hover:bg-white border-2 border-emerald-500"
     }
 
     return (
@@ -45,7 +49,10 @@ export default async function SingleTask({ params }: { params: any }) {
                     {currentTask.description}
                 </div>
 
-                <button className={TASK.doneBtn}>Mark as done</button>
+                <div className={TASK.controlWrapper}>
+                    <button className={`${TASK.button} ${TASK.editBtn}`}>Edit</button>
+                    <button className={`${TASK.button} ${TASK.doneBtn}`}>Mark as done</button>
+                </div>
             </section>
         </div>
     )
