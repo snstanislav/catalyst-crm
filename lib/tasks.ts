@@ -1,5 +1,9 @@
 import axios from "axios";
 
+export async function fetchTask(taskId:string) {
+    return (await axios(`http://localhost:3000/api/tasks/${taskId}`)).data.task;
+}
+
 export async function fetchAllTasks() {
     return (await axios(`http://localhost:3000/api/tasks`)).data.allTasks;
 }

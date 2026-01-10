@@ -1,195 +1,54 @@
 
-const urgentTasks: UrgentTask[] = [
-  {
-    id: "2354",
-    title: "To interrogate about reklamation with Bill",
-    type: "meeting",
-    client: "AbCS Inc.",
-    dueDate: "31-12-2025 23:00",
-    priority: "high"
-  },
-  {
-    id: "57854",
-    title: "To send emails with proposals",
-    type: "email",
-    client: "Ababahalamaha publ.",
-    dueDate: "29-12-2025 13:00",
-    priority: "high"
-  },
-  {
-    id: "9809",
-    title: "To call Andrea after acceptation",
-    type: "call",
-    client: "aberero GmbH",
-    dueDate: "28-12-2025 12:00",
-    priority: "high"
-  },
-  {
-    id: "659615",
-    title: "Make somethig else",
-    type: "todo",
-    client: "AbCSDD msdfsdfsdfqwererwer Inc.",
-    dueDate: "31-12-2025 23:00",
-    priority: "medium"
-  },
-  {
-    id: "03232",
-    title: "Make somethig else for someone being somewhere",
-    type: "message",
-    client: "DDDccc Inc.",
-    dueDate: "31-12-2025 23:00",
-    priority: "low"
-  }
-  ,
-  {
-    id: "03232",
-    title: "Make somethig else for someone being somewhere",
-    type: "unknown",
-    client: "DDDccc Inc.",
-    dueDate: "31-12-2025 23:00",
-    priority: "low"
-  }
-]
-
-const importantClients = [
-  {
-    id: "123",
-    name: "AbCS Inc.",
-    country: "Australia",
-    city: "Derby",
-    success: 123,
-    progress: 15,
-    failed: 7
-  },
-  {
-    id: "234",
-    name: "Ababahalamaha publ.",
-    country: "Ukraine",
-    city: "Lutsk",
-    success: 115,
-    progress: 10,
-    failed: 1
-  },
-  {
-    id: "345",
-    name: "aberero GmbH",
-    country: "Germany",
-    city: "Verl",
-    success: 111,
-    progress: 10,
-    failed: 0
-  },
-  {
-    id: "456",
-    name: "AbCSDD msdfsdfsdfqwererwer Inc.",
-    country: "Botswana",
-    city: "Mbapwa",
-    success: 99,
-    progress: 8,
-    failed: 5
-  },
-  {
-    id: "567",
-    name: "DDDccc Inc.",
-    country: "USA",
-    city: "Boston",
-    success: 86,
-    progress: 7,
-    failed: 0
-  },
-  {
-    id: "789",
-    name: "ABAqwe",
-    country: "Luxembourg",
-    city: "Luxembourg",
-    success: 79,
-    progress: 0,
-    failed: 1
-  },
-  {
-    id: "8910",
-    name: "Asdfg",
-    country: "Ukraine",
-    city: "Sumy",
-    success: 50,
-    progress: 7,
-    failed: 0
-  },
-  {
-    id: "9911",
-    name: "OOUO",
-    country: "Austria",
-    city: "Salzburg",
-    success: 40,
-    progress: 3,
-    failed: 0
-  },
-  {
-    id: "1256",
-    name: "Bases-J",
-    country: "France",
-    city: "Marsel",
-    success: 23,
-    progress: 7,
-    failed: 1
-  },
-  {
-    id: "2345",
-    name: "TTT",
-    country: "USA",
-    city: "Cincinatty",
-    success: 15,
-    progress: 5,
-    failed: 0
-  },
-
-]
-
-const frequentContacts = [
-  {
-    id: "12",
-    name: "Chev Chelios",
-    company: "AbCS Inc.",
-    phone: "+42 9564551",
-    email: "chev.c@dom.com"
-  },
-  {
-    id: "23",
-    name: "Max Musterman",
-    company: "aberero GmbH",
-    phone: "+49 0526161, +49 5956131",
-    email: "max.mm@site.de"
-  },
-  {
-    id: "45",
-    name: "Akiko Wada",
-    company: "DDDccc Inc.",
-    phone: "+10 51648634",
-    email: "akwd@ddd.com"
-  },
-  {
-    id: "56",
-    name: "John Doe",
-    company: "DDDccc Inc.",
-    phone: "+10 546434",
-    email: "jdoe@ddd.com"
-  },
-  {
-    id: "789",
-    name: "Gryhoriy Kovalenko",
-    company: "Ababahalamaha publ.",
-    phone: "+38 099-024-53, +38 093-345-46, +38 067-899-45",
-    email: "gr.kovalenko@ukr.net"
-  }
-]
-
 import Link from "next/link";
-import { UrgentTask } from "../lib/types/UrgentTask";
-import TaskListItem from "../components/task/TaskListItem";
-import ClientListItem from "../components/client/ClientListItem";
-import ContactItem from "../components/ContactItem";
+import TaskListItem from "@components/task/TaskListItem";
+import ClientListItem from "@components/client/ClientListItem";
+import ContactItem from "@components/ContactItem";
+import type Task from "@lib/types/Task";
+import type Client from "@lib/types/Client";
+import { fetchAllTasks } from "@lib/tasks";
+import { fetchAllClients } from "@lib/clients";
 
-export default function Home() {
+export default async function Home() {
+
+  const urgentTasks: Task[] = await fetchAllTasks() /// REPLACE THE FILLER LATER
+  const importantClients: Client[] = await fetchAllClients() /// REPLACE THE FILLER LATER
+  const frequentContacts = [
+    {
+      id: "12",
+      name: "Chev Chelios",
+      clientId: "123", // AbCS Inc.
+      phone: "+42 9564551",
+      email: "chev.c@dom.com, chev.c2@outlook.com"
+    },
+    {
+      id: "23",
+      name: "Max Musterman",
+      clientId: "345", // aberero GmbH
+      phone: "+49 0526161, +49 5956131",
+      email: "max.mm@site.de"
+    },
+    {
+      id: "45",
+      name: "Akiko Wada",
+      clientId: "567", // DDDccc Inc.
+      phone: "+10 51648634",
+      email: "akwd@ddd.com"
+    },
+    {
+      id: "56",
+      name: "John Doe",
+      clientId: "567", // DDDccc Inc.
+      phone: "+10 546434",
+      email: "jdoe@ddd.com"
+    },
+    {
+      id: "789",
+      name: "Gryhoriy Kovalenko",
+      clientId: "234", // Ababahalamaha publ.
+      phone: "+38 099-024-53, +38 093-345-46, +38 067-899-45",
+      email: "gr.kovalenko@ukr.net"
+    }
+  ]; /// REPLACE THE FILLER LATER
 
   const WRAPPER = "grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] xl:grid-cols-[1fr_0.9fr_0.8fr] justify-stretch gap-3 p-3 h-full bg-slate-300";
   const SECTION = {
@@ -215,6 +74,7 @@ export default function Home() {
           ))}
         </ol>
       </section>
+
       <section className={SECTION.base}>
         <div className={SECTION.header}>
           <h2>Important Clients</h2>
@@ -228,8 +88,8 @@ export default function Home() {
             </li>
           ))}
         </ol>
-
       </section>
+
       <section className={SECTION.base}>
         <div className={SECTION.header}>
           <h2>Recent Contacts</h2>
@@ -242,7 +102,6 @@ export default function Home() {
             </li>
           ))}
         </ol>
-
       </section>
     </div>
   );

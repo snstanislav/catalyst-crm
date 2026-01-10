@@ -1,4 +1,4 @@
-import Client from "../../../lib/types/Client"
+import type Client from "../../../lib/types/Client"
 const allClients: Client[] = [
     {
         id: "123",

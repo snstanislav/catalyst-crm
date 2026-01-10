@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link"
-import SuccessMark from "@/components/history/SuccessMark";
-import ProgressMark from "@/components/history/ProgressMark";
-import FailMark from "@/components/history/FailMark";
-import type Client from "@/lib/types/Client";
+import SuccessMark from "@components/history/SuccessMark";
+import ProgressMark from "@components/history/ProgressMark";
+import FailMark from "@components/history/FailMark";
+import type Client from "@lib/types/Client";
 
 export default function ClientTable({ allClients }: { allClients: Client[] }) {
 

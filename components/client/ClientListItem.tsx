@@ -20,7 +20,6 @@ export default function ClientListItem({ clientItem }: { clientItem: any }) {
                     <HistoryBar success={clientItem.success} progress={clientItem.progress} failed={clientItem.failed} />
                 </div>
             </div>
-
         </div>
     )
 }

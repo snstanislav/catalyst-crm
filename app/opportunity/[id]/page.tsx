@@ -1,19 +1,15 @@
-import Link from "next/link";
-import { fetchDeal } from "@lib/deals";
-import { fetchRelatedContacts } from "@lib/contacts"
-import { fetchRelatedTasks } from "@lib/tasks"
-import { fetchRelatedDeals } from "@lib/deals";
+import TaskTable from "@components/client/TaskTable";
 import type Opportunity from "@lib/types/Opportunity";
-import ContactItem from "@components/ContactItem";
-import TaskTable from "@/components/client/TaskTable";
-import { fetchClient } from "@/lib/clients";
+import type Task from "@lib/types/Task";
+import { fetchDeal } from "@lib/deals";
+import { fetchRelatedTasks } from "@lib/tasks"
+import { fetchClient } from "@lib/clients";
 
 export default async function SingleOpportunity({ params }: { params: any }) {
     const { id } = await params;
 
-    const opportunity = await fetchDeal(id)
-    const relatedContacts = await fetchRelatedContacts(id)
-    const relatedTasks = await fetchRelatedTasks(id)
+    const opportunity: Opportunity = await fetchDeal(id)
+    const relatedTasks: Task[] = await fetchRelatedTasks(id)
 
     const GENERAL = {
         wrapper: "page-wrapper flex flex-col gap-3 w-full  font-mono ",
@@ -21,7 +17,7 @@ export default async function SingleOpportunity({ params }: { params: any }) {
         linkPrimary: "link-primary",
         sectionWrapper: "page-content-card flex flex-wrap flex-col gap-2 h-fit p-5 overflow-x-auto",
         header: "header-primary",
-        nameHeader: "header-primary mb-2 text-yellow-600 text-2xl",
+        nameHeader: "header-primary mb-2 text-lime-600 text-2xl",
         details: "flex flex-col gap-1 px-7 py-2 w-full",
 
         detailsTable: " w-fit ml-3 text-sm",
@@ -49,9 +45,7 @@ export default async function SingleOpportunity({ params }: { params: any }) {
                             <th className={GENERAL.sellHeading}>Order status:</th>
                             <td className={GENERAL.sellContent}>{opportunity.status}</td>
                         </tr>
-                        <tr>
-                            <td colSpan={2}>{opportunity.description}</td>
-                        </tr>
+                        
                         <tr>
                             <th className={GENERAL.sellHeading}>Success probability:</th>
                             <td className={GENERAL.sellContent}>{opportunity.probability}%</td>

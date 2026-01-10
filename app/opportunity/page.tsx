@@ -2,7 +2,7 @@ import { fetchAllDeals } from "@/lib/deals";
 import type Opportunity from "@lib/types/Opportunity";
 import OpportunityTable from "@components/client/OpportunityTable";
 
-export default async function Clients() {
+export default async function Opportunities() {
 
     const allOpportunities: Opportunity[] = await fetchAllDeals()
 

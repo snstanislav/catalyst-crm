@@ -7,5 +7,5 @@ export default interface Task {
     assignedTo: string;
     status: string;
     priority: string;
-    client: string;
+    clientId: string;
 }

@@ -102,9 +102,12 @@ const allTasks: Task[] = [
 
 import type Task from "@lib/types/Task"
 
-export function GET() {
-    return Response.json({ 
-        success: true, 
-        allTasks
-     })
+export async function GET(_req: Request, { params }: { params: { id: string } }) {
+    const { id } = await params;
+    const result = allTasks.find((task: Task) => task.id === id);
+
+    return Response.json({
+        success: result ? true : false,
+        task: result
+    })
 }

@@ -1,7 +1,7 @@
 import ClientTable from "@components/client/ClientTable";
 import HistoryBar from "@components/history/HistoryBar";
-import { fetchAllClients } from "@lib/clients";
 import type Client from "@lib/types/Client";
+import { fetchAllClients } from "@lib/clients";
 
 export default async function Clients() {
 
@@ -20,7 +20,8 @@ export default async function Clients() {
         <div className={CLIENTS.wrapper}>
             <h1 className={CLIENTS.header}>Clients</h1>
             <div className={CLIENTS.history}>
-                Total history: <HistoryBar success={success} progress={progress} failed={failed} />
+                Total history:
+                <HistoryBar success={success} progress={progress} failed={failed} />
             </div>
             <ClientTable allClients={allClients} />
         </div>
