@@ -5,7 +5,7 @@ import { fetchRelatedTasks } from "@lib/tasks"
 import { fetchRelatedDeals } from "@lib/deals";
 import type Opportunity from "@lib/types/Opportunity";
 import ContactItem from "@components/ContactItem";
-import TaskTable from "@components/client/TaskTable";
+import TaskTable from "@/components/task/TaskTable";
 import OpportunityTable from "@components/client/OpportunityTable";
 
 export default async function SingleClient({ params }: { params: any }) {

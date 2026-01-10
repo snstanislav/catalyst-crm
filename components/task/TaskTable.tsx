@@ -3,8 +3,8 @@ import ProgressMark from "../history/ProgressMark";
 import SuccessMark from "../history/SuccessMark";
 import FailMark from "../history/FailMark";
 import type Task from "@lib/types/Task";
-import PriorityMarker from "../task/PriorityMarker";
-import TaskTypeMarker from "../task/TaskTypeMarker";
+import PriorityMarker from "./PriorityMarker";
+import TaskTypeMarker from "./TaskTypeMarker";
 import { fetchClient } from "@/lib/clients";
 
 export default function TaskTable({ allTasks, isAllShowed }: { allTasks: Task[], isAllShowed: boolean }) {

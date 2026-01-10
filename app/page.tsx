@@ -68,7 +68,7 @@ export default async function Home() {
 
         <ol className={SECTION.list}>
           {urgentTasks.map((elem, index) => (
-            <li key={index}>
+            <li key={elem.id}>
               <TaskListItem taskItem={elem} index={index} />
             </li>
           ))}

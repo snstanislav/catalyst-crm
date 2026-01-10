@@ -1,4 +1,4 @@
-import TaskTable from "@/components/client/TaskTable";
+import TaskTable from "@/components/task/TaskTable";
 import { fetchAllTasks } from "@/lib/tasks";
 import type Task from "@lib/types/Task";
 

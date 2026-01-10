@@ -6,7 +6,7 @@ export default function TodayTasks() {
         base: "relative flex flex-col items-center text-md font-mono h-fit",
         summaryBar: "flex flex-row items-center gap-2 px-2 py-1 hover:bg-yellow-200  rounded-md list-none cursor-pointer",
         summaryText: "font-semibold text-red-500",
-        content: "fixed top-9 left-0 flex flex-col gap-1 px-5 py-4 font-normal border border-gray-200 rounded-xs bg-white shadow-xl/20",
+        content: "absolute top-9 left-0 flex flex-col gap-1 px-7 py-5 font-normal border border-gray-200 rounded-xs bg-white shadow-xl/20",
         icoSize: { w: 27, h: 13 }
     }
 
@@ -24,14 +24,8 @@ export default function TodayTasks() {
                 <DateTimeClock />
             </summary>
             <div className={TODAY_TASKS.content}>
-                <h3>Actual tasks:</h3>
-                wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
-                <br />wrqrwerwerwqrew
+                <h3>Current issues:</h3>
+                coming soon...
             </div>
         </details>
     )
