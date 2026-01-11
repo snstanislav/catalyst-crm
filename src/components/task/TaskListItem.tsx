@@ -3,7 +3,7 @@ import TaskTypeMarker from "./TaskTypeMarker"
 import PriorityMarker from "./PriorityMarker"
 import Link from "next/link"
 import type Task from "@lib/types/Task"
-import { fetchClient } from "@lib/clients"
+import { fetchClient } from "@/lib/api/clients"
 
 export default async function TaskListItem({ taskItem, index }: { taskItem: Task, index: number }) {
 

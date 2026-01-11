@@ -1,4 +1,4 @@
-import { fetchAllDeals } from "@/lib/deals";
+import { fetchAllDeals } from "@/lib/api/deals";
 import type Opportunity from "@lib/types/Opportunity";
 import OpportunityTable from "@/components/deal/OpportunityTable";
 

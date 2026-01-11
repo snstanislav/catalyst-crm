@@ -19,12 +19,12 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"],
-      "@app/*": ["app/*"],
-      "@lib/*": ["lib/*"],
-      "@components/*": ["components/*"]
+      "@/*": ["./src/*"],
+      "@app/*": ["src/app/*"],
+      "@lib/*": ["src/lib/*"],
+      "@components/*": ["src/components/*"]
     }
   },
   "include": [

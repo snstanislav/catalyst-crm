@@ -5,8 +5,8 @@ import PriorityMarker from "@components/task/PriorityMarker";
 import TaskTypeMarker from "@components/task/TaskTypeMarker";
 import type Client from "@lib/types/Client";
 import type Task from "@lib/types/Task";
-import { fetchClient } from "@lib/clients";
-import { fetchTask } from "@lib/tasks";
+import { fetchClient } from "@/lib/api/clients";
+import { fetchTask } from "@/lib/api/tasks";
 
 export default async function SingleTask({ params }: { params: any }) {
     const { id } = await params;

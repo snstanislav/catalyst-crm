@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { fetchClient } from "@lib/clients";
-import { fetchRelatedContacts } from "@lib/contacts"
-import { fetchRelatedTasks } from "@lib/tasks"
-import { fetchRelatedDeals } from "@lib/deals";
+import { fetchClient } from "@/lib/api/clients";
+import { fetchRelatedContacts } from "@/lib/api/contacts"
+import { fetchRelatedTasks } from "@/lib/api/tasks"
+import { fetchRelatedDeals } from "@/lib/api/deals";
 import type Opportunity from "@lib/types/Opportunity";
 import ContactItem from "@/components/client/ContactItem";
 import TaskTable from "@/components/task/TaskTable";

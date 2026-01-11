@@ -5,8 +5,8 @@ import ClientListItem from "@components/client/ClientListItem";
 import ContactItem from "@/components/client/ContactItem";
 import type Task from "@lib/types/Task";
 import type Client from "@lib/types/Client";
-import { fetchAllTasks } from "@lib/tasks";
-import { fetchAllClients } from "@lib/clients";
+import { fetchAllTasks } from "@/lib/api/tasks";
+import { fetchAllClients } from "@/lib/api/clients";
 
 export default async function Home() {
 

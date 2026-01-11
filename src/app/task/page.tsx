@@ -1,5 +1,5 @@
 import TaskTable from "@/components/task/TaskTable";
-import { fetchAllTasks } from "@/lib/tasks";
+import { fetchAllTasks } from "@/lib/api/tasks";
 import type Task from "@lib/types/Task";
 
 export default async function Clients() {

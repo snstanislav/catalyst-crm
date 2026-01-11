@@ -1,7 +1,7 @@
 import ClientTable from "@components/client/ClientTable";
 import HistoryBar from "@components/history/HistoryBar";
 import type Client from "@lib/types/Client";
-import { fetchAllClients } from "@lib/clients";
+import { fetchAllClients } from "@/lib/api/clients";
 
 export default async function Clients() {
 

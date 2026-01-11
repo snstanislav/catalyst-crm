@@ -3,7 +3,7 @@ import type Opportunity from "@lib/types/Opportunity";
 import ProgressMark from "../history/ProgressMark";
 import SuccessMark from "../history/SuccessMark";
 import FailMark from "../history/FailMark";
-import { fetchClient } from "@lib/clients";
+import { fetchClient } from "@/lib/api/clients";
 
 export default function OpportunityTable({ allOpportunities, isAllShowed }: { allOpportunities: Opportunity[], isAllShowed: boolean }) {
 

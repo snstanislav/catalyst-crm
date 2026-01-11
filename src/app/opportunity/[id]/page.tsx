@@ -1,9 +1,9 @@
 import TaskTable from "@/components/task/TaskTable";
 import type Opportunity from "@lib/types/Opportunity";
 import type Task from "@lib/types/Task";
-import { fetchDeal } from "@lib/deals";
-import { fetchRelatedTasks } from "@lib/tasks"
-import { fetchClient } from "@lib/clients";
+import { fetchDeal } from "@/lib/api/deals";
+import { fetchRelatedTasks } from "@/lib/api/tasks"
+import { fetchClient } from "@/lib/api/clients";
 
 export default async function SingleOpportunity({ params }: { params: any }) {
     const { id } = await params;

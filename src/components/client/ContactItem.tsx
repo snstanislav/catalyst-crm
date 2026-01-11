@@ -1,4 +1,4 @@
-import { fetchClient } from "@/lib/clients"
+import { fetchClient } from "@/lib/api/clients"
 import Link from "next/link"
 
 export default async function FrequentContactsItem({ contactItem, showFirm }: { contactItem: any, showFirm: boolean }) {
